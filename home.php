@@ -1,5 +1,12 @@
 <?php
 session_start();
+//Probably caused by back button... Check if logged-in...
+if(!$_SESSION["username"])
+{
+    //Do not show protected data, redirect to login...
+    header('Location: login.php');
+}
+
 if (isset($_SESSION["username"])) {
     $username = $_SESSION["username"];
     session_write_close();
