@@ -1,6 +1,6 @@
 <?php
 use Phppot\Member;
-
+session_start();
 if (! empty($_POST["login-btn"])) {
     require_once __DIR__ . '/Model/Member.php';
     $member = new Member();
