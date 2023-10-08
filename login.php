@@ -1,11 +1,5 @@
 <?php
 use Phppot\Member;
-session_start();
-
-// on login screen, redirect to dashboard if already logged in
-if(isset($_SESSION['username'])){
-    header('location:home.php');
-}
 
 if (! empty($_POST["login-btn"])) {
     require_once __DIR__ . '/Model/Member.php';
